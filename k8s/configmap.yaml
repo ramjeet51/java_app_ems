@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ems-config
+  namespace: ems
+data:
+  # --- Backend ---
+  SERVER_PORT: "8080"
+  DB_HOST: "mysql"
+  DB_PORT: "3306"
+  DB_NAME: "ems_db"
+  DB_USE_SSL: "false"
+  DB_POOL_SIZE: "10"
+  JPA_DDL_AUTO: "update"
+  JWT_EXPIRATION_MS: "3600000"
+  JWT_REFRESH_EXPIRATION_MS: "604800000"
+  JWT_ISSUER: "ems-backend"
+  CORS_ALLOWED_ORIGINS: "https://your-domain.example.com"
+  CORS_ALLOWED_METHODS: "GET,POST,PUT,PATCH,DELETE,OPTIONS"
+  CORS_ALLOWED_HEADERS: "*"
+  CORS_ALLOW_CREDENTIALS: "true"
+  DEFAULT_ADMIN_EMAIL: "admin@ems.local"
+  LOGGING_LEVEL_ROOT: "INFO"
+  LOGGING_LEVEL_APP: "INFO"
+
+  # --- Frontend ---
+  NEXT_PUBLIC_API_BASE_URL: "/backend"
+  BACKEND_INTERNAL_URL: "http://backend:8080"
