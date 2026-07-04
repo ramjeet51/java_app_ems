@@ -240,3 +240,30 @@ Frontend variables (`frontend/.env.local.example`):
 ## License
 
 MIT
+
+backend
+│
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │    ├── controller   → API Handle
+│   │   │    ├── service      → Business Logic
+│   │   │    ├── repository   → Database Access
+│   │   │    ├── entity       → Database Tables
+│   │   │    ├── dto          → Request/Response Objects
+│   │   │    └── config       → Security & Configuration
+│   │   │
+│   │   └── resources
+│   │        ├── application.yml → Project Configuration
+│   │        └── db/
+│   │             └── schema_reference.sql → Database Schema
+│   │
+│   └── test
+│        └── EmployeeManagementApplicationTests.java → Unit/Integration Tests
+│
+├── pom.xml          → Maven Dependencies & Build
+├── Dockerfile       → Docker Image Instructions
+├── .dockerignore    → Docker Ignore Rules
+├── .env             → Secret Environment Variables
+└── .env.example     → Sample Environment Variables
+
